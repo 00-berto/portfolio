@@ -11,6 +11,7 @@ export interface Project {
     sourceLink?: string
     projectLink?: string
     images: string[]
+    darkMode?: boolean
     badges: {
         text: string
         variant?: "default" | "destructive" | "outline" | "secondary" | null | undefined
@@ -27,7 +28,7 @@ export default function ProjectOverview({ project }: { project: Project }) {
                     <CarouselContent className={"gap-0 ml-0 relative"}>
                         {project.images.map((image, index) =>
                             <CarouselItem key={index} className={"pl-0 inset"}>
-                                <img draggable={false} src={`/projects/${project.id}/banner_${image}.png`} alt={`${project.name} banner, image ${image}`} className="w-full h-auto aspect-video select-none"/>
+                                <img draggable={false} src={`/projects/${project.id}/banner_${image}${project.darkMode ? "_dark" : ""}.png`} alt={`${project.name} banner, image ${image}`} className="w-full h-auto aspect-video select-none"/>
                             </CarouselItem>
                         )}
                     </CarouselContent>
@@ -37,7 +38,7 @@ export default function ProjectOverview({ project }: { project: Project }) {
                 <img draggable={false} src={`/projects/${project.id}/banner_${project.images[0]}.png`} alt={`${project.name} banner, image ${project.images[0]}`} className="w-full h-auto aspect-video select-none"/>
             )}
             <div className="flex flex-col gap-4 relative h-full p-3 pt-4 border border-t-0 rounded-b-xl">
-                <img draggable={false} src={`/projects/${project.id}/icon.png`} alt={`${project.name} icon`} className="absolute -top-12 left-4 rounded-xl size-16 object-cover shadow-[0px_0px_16px_rgba(0,0,0,0.25)] select-none aspect-square" />
+                <img draggable={false} src={`/projects/${project.id}/icon${project.darkMode ? "_dark" : ""}.png`} alt={`${project.name} icon`} className={clsx({ "shadow-[0px_0px_16px_rgba(256,256,256,0.25)]": project.darkMode }, { "shadow-[0px_0px_16px_rgba(0,0,0,0.25)]": !project.darkMode }, "absolute -top-12 left-4 rounded-xl size-16 object-cover select-none aspect-square")} />
                 <div className="flex flex-col gap-2 p-3">
                     <div className="flex flex-row gap-2 items-center">
                         <div className="text-secondary-foreground text-2xl font-bold">{project.name}</div>
