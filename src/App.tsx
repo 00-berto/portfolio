@@ -34,7 +34,7 @@ export default function App() {
     ]
 
     return (
-        <div className={"flex flex-row min-h-screen items-center justify-center bg-background"}>
+        <div className={"flex flex-row min-h-screen items-center justify-center bg-background selection:bg-accent-foreground selection:text-background"}>
             <div className="flex flex-row gap-3">
                 {projects.map((project, index) => (
                     <ProjectOverview key={index} project={project}/>
