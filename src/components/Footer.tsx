@@ -51,22 +51,22 @@ export default function Footer() {
             {/*©*/}
             2025 NAUPLIA. tutti i diritti riservati.
           </div>
-          <div className="flex flex-row gap-5 items-center sm:text-sm text-xs">
-            <button
-              className={
-                "hover:text-black/70 dark:hover:text-white/70 transition-all ease-out duration-100 clickable"
-              }
-            >
-              Crediti
-            </button>
-            <button
-              className={
-                "hover:text-black/70 dark:hover:text-white/70 transition-all ease-out duration-100 clickable"
-              }
-            >
-              Contattaci
-            </button>
-          </div>
+          {/*<div className="flex flex-row gap-5 items-center sm:text-sm text-xs">*/}
+          {/*  <button*/}
+          {/*    className={*/}
+          {/*      "hover:text-black/70 dark:hover:text-white/70 transition-all ease-out duration-100 clickable"*/}
+          {/*    }*/}
+          {/*  >*/}
+          {/*    Crediti*/}
+          {/*  </button>*/}
+          {/*  <button*/}
+          {/*    className={*/}
+          {/*      "hover:text-black/70 dark:hover:text-white/70 transition-all ease-out duration-100 clickable"*/}
+          {/*    }*/}
+          {/*  >*/}
+          {/*    Contattaci*/}
+          {/*  </button>*/}
+          {/*</div>*/}
         </div>
       </div>
     </div>
