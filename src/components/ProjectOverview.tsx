@@ -18,7 +18,7 @@ export interface Project {
   projectLink?: string;
   images: string[];
   darkMode?: boolean;
-  badges: {
+  badges?: {
     text: string;
     variant?:
       | "default"
