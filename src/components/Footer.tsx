@@ -8,7 +8,11 @@ export default function Footer() {
     <div className="w-full sm:flex hidden flex-col backdrop-blur-xl">
       <div className="bg-accent/50 px-4 py-6 flex flex-row items-center justify-between border-t border-black/20 dark:border-white/20">
         <div className="flex flex-row gap-3 items-center">
-          <img src={"/memoji.png"} className={"size-12 text-primary-500"} />
+          <img
+            alt={"berto memoji"}
+            src={"/memoji.png"}
+            className={"size-12 text-primary-500"}
+          />
           <div className="flex flex-col gap-0">
             <div
               className={"text-xl text-primary font-extrabold sm:block hidden"}
