@@ -98,7 +98,7 @@ export default function App() {
             />
           </div>
         </div>
-        <div className="flex flex-row gap-3 justify-start w-full p-12">
+        <div className="flex flex-row gap-3 justify-start w-full pt-12 p-3">
           {projects.map((project, index) => (
             <ProjectOverview key={index} project={project} />
           ))}
