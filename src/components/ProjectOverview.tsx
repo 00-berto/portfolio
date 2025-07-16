@@ -35,7 +35,7 @@ export default function ProjectOverview({ project }: { project: Project }) {
   return (
     <div
       className={
-        "flex flex-col gap-0 rounded-xl w-96 bg-secondary/50 overflow-clip"
+        "flex flex-col gap-0 rounded-xl w-96 bg-secondary/50 overflow-clip border"
       }
     >
       {project.images.length > 1 ? (
@@ -71,7 +71,7 @@ export default function ProjectOverview({ project }: { project: Project }) {
           className="w-full h-auto aspect-video select-none"
         />
       )}
-      <div className="flex flex-col gap-4 relative h-full p-3 pt-4 border border-t-0 rounded-b-xl">
+      <div className="flex flex-col gap-4 relative h-full p-3 pt-4">
         <img
           draggable={false}
           src={`/projects/${project.id}/icon${project.darkMode ? "_dark" : ""}.png`}
