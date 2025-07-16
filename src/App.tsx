@@ -36,6 +36,13 @@ export default function App() {
       ],
       sourceLink: "https://github.com/00-berto/sticky-v2",
     },
+    {
+      id: "portfolio",
+      name: "Portfolio",
+      description:
+        "This very website! In here I showcase all my work and show the world who I really am.",
+      images: ["landing"],
+    },
   ];
 
   return (
