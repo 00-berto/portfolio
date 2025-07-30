@@ -5,7 +5,7 @@ import GithubIcon from "@/components/icons/GithubIcon.tsx";
 import InstagramIcon from "@/components/icons/InstagramIcon.tsx";
 import SpotifyIcon from "@/components/icons/SpotifyIcon.tsx";
 import { ArrowDownIcon } from "lucide-react";
-import Cursor from "@/components/Cursor.tsx";
+// import Cursor from "@/components/Cursor.tsx";
 import AnimatedSubtitle from "@/components/AnimatedSubtitle.tsx";
 import Footer from "@/components/Footer.tsx";
 
@@ -60,7 +60,7 @@ export default function App() {
 
   return (
     <>
-      <Cursor />
+      {/*<Cursor />*/}
       <div
         className={
           "flex flex-col min-h-screen items-center justify-center bg-background selection:bg-accent-foreground selection:text-background"
