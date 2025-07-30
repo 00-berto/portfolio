@@ -42,6 +42,8 @@ export default function App() {
       description:
         "This very website! In here I showcase all my work and show the world who I really am.",
       images: ["landing"],
+      sourceLink: "https://github.com/00-berto/portfolio",
+      projectLink: "https://00berto.vercel.app",
     },
     {
       id: "tunepilot",
