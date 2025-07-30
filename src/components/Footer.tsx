@@ -24,21 +24,35 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-row gap-5 text-accent-foreground">
-          <button>
+          <a
+            href={"https://github.com/00-berto"}
+            target={"_blank"}
+            className={"clickable"}
+          >
             <GithubIcon
               className={"size-8 transition-all ease-out duration-100"}
             />
-          </button>
-          <button>
+          </a>
+          <a
+            href={"https://instagram.com/albertocornacchia_"}
+            target={"_blank"}
+            className={"clickable"}
+          >
             <InstagramIcon
               className={"size-8 transition-all ease-out duration-100"}
             />
-          </button>
-          <button>
+          </a>
+          <a
+            href={
+              "https://open.spotify.com/user/31f2s2nnbfnjtab5cr77ofnwvdna?si=8d29e6b79c164b3a"
+            }
+            target={"_blank"}
+            className={"clickable"}
+          >
             <SpotifyIcon
               className={"size-8 transition-all ease-out duration-100"}
             />
-          </button>
+          </a>
         </div>
       </div>
 

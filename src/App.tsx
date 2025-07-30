@@ -76,6 +76,7 @@ export default function App() {
               <div className="flex flex-row gap-4">
                 <a
                   href={"https://github.com/00-berto"}
+                  target={"_blank"}
                   className="clickable hover:underline flex flex-row gap-1 items-center justify-start text-foreground text-lg font-bold"
                 >
                   <GithubIcon className={"size-5 my-auto"} />
@@ -84,6 +85,7 @@ export default function App() {
 
                 <a
                   href={"https://instagram.com/albertocornacchia_"}
+                  target={"_blank"}
                   className="clickable hover:underline flex flex-row gap-1 items-center justify-start text-foreground text-lg font-bold"
                 >
                   <InstagramIcon className={"size-5 my-auto"} />
@@ -94,6 +96,7 @@ export default function App() {
                   href={
                     "https://open.spotify.com/user/31f2s2nnbfnjtab5cr77ofnwvdna?si=8d29e6b79c164b3a"
                   }
+                  target={"_blank"}
                   className="clickable hover:underline flex flex-row gap-1 items-center justify-start text-foreground text-lg font-bold"
                 >
                   <SpotifyIcon className={"size-5 my-auto"} />
