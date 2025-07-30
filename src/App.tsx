@@ -43,6 +43,19 @@ export default function App() {
         "This very website! In here I showcase all my work and show the world who I really am.",
       images: ["landing"],
     },
+    {
+      id: "tunepilot",
+      name: "tunepilot",
+      description: "A music player for local files, with Discord integration.",
+      images: ["maze", "handyman", "cosby"],
+      badges: [
+        {
+          text: "Unfinished",
+        },
+      ],
+      sourceLink: "https://github.com/00-berto/tunepilot",
+      downloadLink: "https://github.com/00-berto/tunepilot/releases",
+    },
   ];
 
   return (
@@ -55,7 +68,7 @@ export default function App() {
       >
         <div className="h-screen w-screen flex flex-row p-0 gap-0 relative">
           <div className="w-1/2 h-full flex items-center justify-start p-32">
-            <div className="flex flex-col gap-12 items-start text-left">
+            <div className="clickable flex flex-col gap-12 items-start text-left">
               <div className="flex flex-col gap-2 items-start text-left">
                 <div className="text-7xl text-foreground font-black">berto</div>
                 <AnimatedSubtitle />
@@ -105,7 +118,7 @@ export default function App() {
             />
           </div>
         </div>
-        <div className="flex flex-row gap-3 justify-start w-full pt-12 p-3">
+        <div className="flex-row gap-3 justify-start w-full pt-12 p-3 grid-cols-3 grid">
           {projects.map((project, index) => (
             <ProjectOverview key={index} project={project} />
           ))}

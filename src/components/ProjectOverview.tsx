@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button.tsx";
-import { Code2Icon, GlobeIcon } from "lucide-react";
+import { Code2Icon, DownloadIcon, GlobeIcon } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -16,6 +16,7 @@ export interface Project {
   description?: string;
   sourceLink?: string;
   projectLink?: string;
+  downloadLink?: string;
   images: string[];
   darkMode?: boolean;
   badges?: {
@@ -35,7 +36,7 @@ export default function ProjectOverview({ project }: { project: Project }) {
   return (
     <div
       className={
-        "flex flex-col gap-0 rounded-xl w-96 bg-secondary/50 overflow-clip border"
+        "flex flex-col gap-0 rounded-xl bg-secondary/50 overflow-clip border"
       }
     >
       {project.images.length > 1 ? (
@@ -111,7 +112,9 @@ export default function ProjectOverview({ project }: { project: Project }) {
             {project.description ?? "No description provided."}
           </div>
         </div>
-        {(project.sourceLink || project.projectLink) && (
+        {(project.sourceLink ||
+          project.projectLink ||
+          project.downloadLink) && (
           <div className="w-full flex flex-row items-end justify-end gap-2">
             {project.sourceLink && (
               <Button size={"sm"} variant={"outline"} asChild>
@@ -125,6 +128,13 @@ export default function ProjectOverview({ project }: { project: Project }) {
               <Button size={"sm"} asChild>
                 <a href={project.projectLink}>
                   Go to Project <GlobeIcon />
+                </a>
+              </Button>
+            )}
+            {project.downloadLink && (
+              <Button size={"sm"} asChild>
+                <a href={project.downloadLink}>
+                  Download <DownloadIcon />
                 </a>
               </Button>
             )}

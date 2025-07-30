@@ -19,16 +19,24 @@ function isClickable(el: EventTarget | null): boolean {
 
 export default function Cursor() {
   const cursorRef = useRef<HTMLDivElement>(null);
+  const prevHovered = useRef(false);
 
   useEffect(() => {
     const move = (e: MouseEvent) => {
       const hovered = isClickable(e.target);
       const size = hovered ? CURSOR_SIZE_HOVER : CURSOR_SIZE;
       if (cursorRef.current) {
+        if (hovered !== prevHovered.current) {
+          cursorRef.current.style.transition =
+            "width 150ms, height 150ms, left 150ms, top 150ms";
+        } else {
+          cursorRef.current.style.transition = "width 150ms, height 150ms";
+        }
         cursorRef.current.style.width = `${size}px`;
         cursorRef.current.style.height = `${size}px`;
         cursorRef.current.style.left = `${e.clientX - size / 2}px`;
         cursorRef.current.style.top = `${e.clientY - size / 2}px`;
+        prevHovered.current = hovered;
       }
     };
 
