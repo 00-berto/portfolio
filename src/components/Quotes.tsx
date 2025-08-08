@@ -20,7 +20,6 @@ export const friendQuotes: Quote[] = [
   },
   { content: "BRAVO BERTO ❤️❤️♾️♾️♾️♾️", author: "carlotta f." },
   { content: "berto hai spaccato godo", author: "carlotta c." },
-  { content: "che figo alb è fatta benissimo 💤💤", author: "as ★" },
   { content: "è fatta bene", author: "tiago" },
 ];
 
