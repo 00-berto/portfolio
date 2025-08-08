@@ -1,68 +1,14 @@
-import ProjectOverview, {
-  type Project,
-} from "@/components/ProjectOverview.tsx";
 import GithubIcon from "@/components/icons/GithubIcon.tsx";
 import InstagramIcon from "@/components/icons/InstagramIcon.tsx";
 import SpotifyIcon from "@/components/icons/SpotifyIcon.tsx";
 import { ArrowDownIcon } from "lucide-react";
-// import Cursor from "@/components/Cursor.tsx";
 import AnimatedSubtitle from "@/components/AnimatedSubtitle.tsx";
 import Footer from "@/components/Footer.tsx";
+import Projects from "@/components/Projects.tsx";
 
 export default function App() {
-  const projects: Project[] = [
-    {
-      id: "fantasummer",
-      name: "fantasummer",
-      description:
-        "a summer game which you can play with friends by completing challenges and competing for first place in the leaderboards",
-      images: ["landing", "challenges", "onboarding"],
-      badges: [
-        {
-          text: "Closed Beta",
-        },
-      ],
-    },
-    {
-      id: "sticky",
-      name: "Sticky (V2)",
-      description:
-        "dumb unfinished sticky note app built with electron and vite (dont ask about v1. we dont talk about v1.)",
-      images: ["sticky"],
-      badges: [
-        {
-          text: "Unfinished",
-        },
-      ],
-      sourceLink: "https://github.com/00-berto/sticky-v2",
-    },
-    {
-      id: "portfolio",
-      name: "Portfolio",
-      description:
-        "This very website! In here I showcase all my work and show the world who I really am.",
-      images: ["landing"],
-      sourceLink: "https://github.com/00-berto/portfolio",
-      projectLink: "https://00berto.vercel.app",
-    },
-    {
-      id: "tunepilot",
-      name: "tunepilot",
-      description: "A music player for local files, with Discord integration.",
-      images: ["maze", "handyman", "cosby"],
-      badges: [
-        {
-          text: "Unfinished",
-        },
-      ],
-      sourceLink: "https://github.com/00-berto/tunepilot",
-      downloadLink: "https://github.com/00-berto/tunepilot/releases",
-    },
-  ];
-
   return (
     <>
-      {/*<Cursor />*/}
       <div
         className={
           "flex flex-col min-h-screen items-center justify-center bg-background selection:bg-accent-foreground selection:text-background"
@@ -123,11 +69,7 @@ export default function App() {
             />
           </div>
         </div>
-        <div className="flex-row gap-3 justify-start w-full pt-12 p-3 grid-cols-3 grid">
-          {projects.map((project, index) => (
-            <ProjectOverview key={index} project={project} />
-          ))}
-        </div>
+        <Projects />
         <Footer />
       </div>
     </>

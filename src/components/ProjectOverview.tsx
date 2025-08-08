@@ -9,6 +9,11 @@ import {
 } from "@/components/ui/carousel.tsx";
 import clsx from "clsx";
 import { Badge } from "@/components/ui/badge.tsx";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip.tsx";
 
 export interface Project {
   id: string;
@@ -30,7 +35,37 @@ export interface Project {
       | undefined;
     className?: string;
   }[];
+  libraries?: Library[];
 }
+
+type Library =
+  | "electron"
+  | "next"
+  | "nextauth"
+  | "postgresql"
+  | "prisma"
+  | "redux"
+  | "shadcn"
+  | "vite";
+
+const libraryMapping: { library: Library; path: string; name: string }[] = [
+  { library: "next", path: "/libraries/next.svg", name: "NextJS" },
+  { library: "vite", path: "/libraries/vite.svg", name: "Vite" },
+  { library: "electron", path: "/libraries/electron.svg", name: "ElectronJS" },
+  {
+    library: "nextauth",
+    path: "/libraries/nextauth.png",
+    name: "NextAuth / Auth.js",
+  },
+  { library: "prisma", path: "/libraries/prisma.svg", name: "Prisma" },
+  {
+    library: "postgresql",
+    path: "/libraries/postgresql.svg",
+    name: "PostgreSQL",
+  },
+  { library: "redux", path: "/libraries/redux.svg", name: "Redux" },
+  { library: "shadcn", path: "/libraries/shadcn.svg", name: "shadcn/ui" },
+];
 
 export default function ProjectOverview({ project }: { project: Project }) {
   return (
@@ -103,6 +138,27 @@ export default function ProjectOverview({ project }: { project: Project }) {
                 ))}
             </div>
           </div>
+          {project.libraries && project.libraries.length > 0 && (
+            <div className="flex flex-row gap-2 items-center">
+              {libraryMapping
+                .filter((libInfo) =>
+                  project.libraries?.includes(libInfo.library),
+                )
+                .map((libInfo) => (
+                  <Tooltip key={libInfo.library}>
+                    <TooltipTrigger asChild>
+                      <img
+                        src={libInfo.path}
+                        alt={libInfo.name}
+                        className={"size-5"}
+                        draggable={false}
+                      />
+                    </TooltipTrigger>
+                    <TooltipContent>{libInfo.name}</TooltipContent>
+                  </Tooltip>
+                ))}
+            </div>
+          )}
           <div
             className={clsx(
               { italic: !project.description },
@@ -115,7 +171,7 @@ export default function ProjectOverview({ project }: { project: Project }) {
         {(project.sourceLink ||
           project.projectLink ||
           project.downloadLink) && (
-          <div className="w-full flex flex-row items-end justify-end gap-2">
+          <div className="w-full flex flex-row items-end justify-end gap-2 mt-auto">
             {project.sourceLink && (
               <Button size={"sm"} variant={"outline"} asChild>
                 <a href={project.sourceLink}>
