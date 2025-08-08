@@ -8,11 +8,11 @@ export default function Projects() {
       id: "fantasummer",
       name: "fantasummer",
       description:
-        "a summer game which you can play with friends by completing challenges and competing for first place in the leaderboards",
+        "A summer game which you can play with friends by completing challenges and competing for first place in the leaderboards.",
       images: ["landing", "challenges", "onboarding"],
       badges: [
         {
-          text: "Closed Beta",
+          text: "Unfinished",
         },
       ],
       libraries: [
@@ -24,20 +24,20 @@ export default function Projects() {
         "shadcn",
       ],
     },
-    {
-      id: "sticky",
-      name: "Sticky (V2)",
-      description:
-        "dumb unfinished sticky note app built with electron and vite (dont ask about v1. we dont talk about v1.)",
-      images: ["sticky"],
-      badges: [
-        {
-          text: "Unfinished",
-        },
-      ],
-      sourceLink: "https://github.com/00-berto/sticky-v2",
-      libraries: ["vite", "electron", "redux", "shadcn"],
-    },
+    // {
+    //   id: "sticky",
+    //   name: "Sticky (V2)",
+    //   description:
+    //     "dumb unfinished sticky note app built with electron and vite (dont ask about v1. we dont talk about v1.)",
+    //   images: ["sticky"],
+    //   badges: [
+    //     {
+    //       text: "Unfinished",
+    //     },
+    //   ],
+    //   sourceLink: "https://github.com/00-berto/sticky-v2",
+    //   libraries: ["vite", "electron", "redux", "shadcn"],
+    // },
     {
       id: "portfolio",
       name: "Portfolio",
@@ -51,7 +51,7 @@ export default function Projects() {
     {
       id: "tunepilot",
       name: "tunepilot",
-      description: "A music player for local files, with Discord integration.",
+      description: "A simple music player for local files.",
       images: ["maze", "handyman", "cosby"],
       badges: [
         {

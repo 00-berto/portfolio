@@ -2,7 +2,13 @@ import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 
 export default function AnimatedSubtitle() {
-  const titles: string[] = ["artist", "designer", "developer", "friend"];
+  const titles: string[] = [
+    "artist",
+    "designer",
+    "developer",
+    "friend",
+    "sticky note enthusiast",
+  ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 

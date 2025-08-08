@@ -14,11 +14,13 @@ export default function App() {
           "flex flex-col min-h-screen items-center justify-center bg-background selection:bg-accent-foreground selection:text-background"
         }
       >
-        <div className="h-screen w-screen flex flex-row p-0 gap-0 relative">
-          <div className="w-1/2 h-full flex items-center justify-start p-32">
+        <div className="h-screen w-full flex flex-row p-0 gap-0 relative">
+          <div className="w-full h-full flex items-center justify-start p-32">
             <div className="clickable flex flex-col gap-12 items-start text-left">
               <div className="flex flex-col gap-2 items-start text-left">
-                <div className="text-7xl text-foreground font-black">berto</div>
+                <div className="text-7xl text-foreground font-black">
+                  berto™
+                </div>
                 <AnimatedSubtitle />
               </div>
               <div className="flex flex-row gap-4">
@@ -54,7 +56,7 @@ export default function App() {
             </div>
           </div>
 
-          <div className="w-1/2 h-full flex items-center justify-center">
+          <div className="w-full h-full flex items-center justify-center">
             <img
               draggable={false}
               src={"/memoji.png"}
