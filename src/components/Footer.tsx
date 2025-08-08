@@ -2,23 +2,25 @@ import Quotes, { friendQuotes } from "@/components/Quotes.tsx";
 import SpotifyIcon from "@/components/icons/SpotifyIcon.tsx";
 import InstagramIcon from "@/components/icons/InstagramIcon.tsx";
 import GithubIcon from "@/components/icons/GithubIcon.tsx";
+import PortfolioIcon from "@/components/icons/PortfolioIcon.tsx";
 
 export default function Footer() {
   return (
     <div className="w-full sm:flex hidden flex-col backdrop-blur-xl">
       <div className="bg-accent/50 px-4 py-6 flex flex-row items-center justify-between border-t border-black/20 dark:border-white/20">
         <div className="flex flex-row gap-3 items-center">
-          <img
-            alt={"berto memoji"}
-            src={"/memoji.png"}
-            className={"size-12 select-none"}
-          />
+          {/*<img*/}
+          {/*  alt={"berto memoji"}*/}
+          {/*  src={"/memoji.png"}*/}
+          {/*  className={"size-12 select-none"}*/}
+          {/*/>*/}
+          <PortfolioIcon className={"text-foreground size-12"} />
           <div className="flex flex-col gap-0">
-            <div
-              className={"text-xl text-primary font-extrabold sm:block hidden"}
-            >
-              berto
-            </div>
+            {/*<div*/}
+            {/*  className={"text-xl text-primary font-extrabold sm:block hidden"}*/}
+            {/*>*/}
+            {/*  berto*/}
+            {/*</div>*/}
             {/*<div className={"uppercase font-black text-xs text-black/30 dark:text-white/30 sm:block hidden"}>portfolio</div>*/}
           </div>
         </div>
