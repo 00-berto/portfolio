@@ -11,7 +11,7 @@ export default function Footer() {
           <img
             alt={"berto memoji"}
             src={"/memoji.png"}
-            className={"size-12 text-primary-500"}
+            className={"size-12 select-none"}
           />
           <div className="flex flex-col gap-0">
             <div
