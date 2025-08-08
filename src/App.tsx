@@ -113,7 +113,7 @@ export default function App() {
               draggable={false}
               src={"/memoji.png"}
               alt={"berto memoji"}
-              className={"size-64 aspect-square object-cover"}
+              className={"size-64 aspect-square object-cover select-none"}
             />
           </div>
 
