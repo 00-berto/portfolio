@@ -5,6 +5,7 @@ import { ArrowDownIcon } from "lucide-react";
 import AnimatedSubtitle from "@/components/AnimatedSubtitle.tsx";
 import Footer from "@/components/Footer.tsx";
 import Projects from "@/components/Projects.tsx";
+import AnimatedImage from "@/components/AnimatedImage.tsx";
 
 export default function App() {
   return (
@@ -57,12 +58,13 @@ export default function App() {
           </div>
 
           <div className="w-full h-full flex items-center justify-center">
-            <img
-              draggable={false}
-              src={"/memoji.png"}
-              alt={"berto memoji"}
-              className={"size-64 aspect-square object-cover select-none"}
-            />
+            {/*<img*/}
+            {/*  draggable={false}*/}
+            {/*  src={"/memoji.png"}*/}
+            {/*  alt={"berto memoji"}*/}
+            {/*  className={"size-64 aspect-square object-cover select-none"}*/}
+            {/*/>*/}
+            <AnimatedImage />
           </div>
 
           <div className="absolute left-0 right-0 bottom-8 items-center justify-center flex">

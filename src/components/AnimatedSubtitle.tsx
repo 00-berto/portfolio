@@ -8,6 +8,7 @@ export default function AnimatedSubtitle() {
     "developer",
     "friend",
     "sticky note enthusiast",
+    "goated driver",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
