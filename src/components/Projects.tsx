@@ -8,11 +8,11 @@ export default function Projects() {
       id: "fantasummer",
       name: "fantasummer",
       description:
-        "A summer game which you can play with friends by completing challenges and competing for first place in the leaderboards.",
+        "Gioco estivo in cui completi sfide per raggiungere il primo posto nelle classifiche, superando tutti i tuoi amici.",
       images: ["landing", "challenges", "onboarding"],
       badges: [
         {
-          text: "Unfinished",
+          text: "Non Finito",
         },
       ],
       libraries: [
@@ -41,21 +41,20 @@ export default function Projects() {
     {
       id: "portfolio",
       name: "Portfolio",
-      description:
-        "This very website! In here I showcase all my work and show the world who I really am.",
+      description: "Proprio questo sito!",
       images: ["landing"],
       sourceLink: "https://github.com/00-berto/portfolio",
-      projectLink: "https://00berto.vercel.app",
+      projectLink: "https://berto.life",
       libraries: ["vite", "shadcn"],
     },
     {
       id: "tunepilot",
       name: "tunepilot",
-      description: "A simple music player for local files.",
+      description: "Semplice app per ascoltare musica locale.",
       images: ["maze", "handyman", "cosby"],
       badges: [
         {
-          text: "Unfinished",
+          text: "Non Finito",
         },
       ],
       sourceLink: "https://github.com/00-berto/tunepilot",

@@ -2,12 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip.tsx";
-import { LanguagesIcon } from "lucide-react";
 
 export interface Quote {
   content: string;
@@ -39,13 +33,12 @@ export const friendQuotes: Quote[] = [
       "tra tutti gli amici di tiago sei il più simpatico sei il più chill",
     englishTranslation:
       "out of all of tiago's friends you're the best one and the chillest one",
-    author: "chiara",
+    author: "chiara (ubriaca e fatta)",
   },
 ];
 
 export default function Quotes({ quotes }: { quotes: Quote[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [preferTranslations, setPreferTranslations] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -73,15 +66,15 @@ export default function Quotes({ quotes }: { quotes: Quote[] }) {
       >
         <div className="font-extrabold text-foreground leading-6">
           "
-          {preferTranslations
+          {/*preferTranslations
             ? (quotes[currentIndex].englishTranslation ??
               quotes[currentIndex].content)
-            : quotes[currentIndex].content}
-          "
+            : quotes[currentIndex].content*/}
+          {quotes[currentIndex].content}"
         </div>
         <div className="text-sm font-semibold text-accent-foreground flex flex-row gap-2 items-center justify-start">
           {quotes[currentIndex].author}
-          {quotes[currentIndex].englishTranslation && (
+          {/*quotes[currentIndex].englishTranslation && (
             <Tooltip>
               <TooltipTrigger
                 asChild
@@ -95,7 +88,7 @@ export default function Quotes({ quotes }: { quotes: Quote[] }) {
                   : "This quote has an English translation. Click here to view it."}
               </TooltipContent>
             </Tooltip>
-          )}
+          )*/}
         </div>
       </motion.div>
     </AnimatePresence>

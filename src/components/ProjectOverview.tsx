@@ -175,7 +175,7 @@ export default function ProjectOverview({ project }: { project: Project }) {
             {project.sourceLink && (
               <Button size={"sm"} variant={"outline"} asChild>
                 <a href={project.sourceLink}>
-                  Source code
+                  Codice sorgente
                   <Code2Icon />
                 </a>
               </Button>
@@ -183,14 +183,14 @@ export default function ProjectOverview({ project }: { project: Project }) {
             {project.projectLink && (
               <Button size={"sm"} asChild>
                 <a href={project.projectLink}>
-                  Go to Project <GlobeIcon />
+                  Vai al Progetto <GlobeIcon />
                 </a>
               </Button>
             )}
             {project.downloadLink && (
               <Button size={"sm"} asChild>
                 <a href={project.downloadLink}>
-                  Download <DownloadIcon />
+                  Scarica <DownloadIcon />
                 </a>
               </Button>
             )}

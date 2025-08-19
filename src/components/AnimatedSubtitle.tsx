@@ -3,11 +3,11 @@ import { useEffect, useState } from "react";
 
 export default function AnimatedSubtitle() {
   const titles: string[] = [
-    "artist",
+    "artista",
     "designer",
-    "developer",
-    "friend",
-    "sticky note enthusiast",
+    //"developer",
+    "amico",
+    "sticky note lover",
     "goated driver",
   ];
 

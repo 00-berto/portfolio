@@ -17,7 +17,7 @@ export default function App() {
     >
       <div className="h-dvh w-full flex sm:flex-row flex-col-reverse p-0 gap-0 relative transition-all">
         <div className="w-full sm:h-full h-auto flex items-center sm:pb-auto pb-8 sm:justify-start justify-center sm:p-32">
-          <div className="clickable flex flex-col gap-12 sm:items-start items-center sm:text-left text-center">
+          <div className="clickable flex flex-col sm:gap-12 gap-8 sm:items-start items-center sm:text-left text-center">
             <div className="flex flex-col gap-2 sm:items-start items-center sm:text-left text-center transition-all ease-out">
               <div className="sm:text-7xl text-5xl text-foreground font-black">
                 berto™
