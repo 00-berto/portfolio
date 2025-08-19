@@ -36,7 +36,7 @@ export default function AnimatedSubtitle() {
         exit="exit"
         transition={{ duration: 0.3 }}
       >
-        <div className="text-4xl text-foreground font-black">
+        <div className="sm:text-4xl text-2xl text-foreground font-black">
           {titles[currentIndex]}
         </div>
       </motion.div>

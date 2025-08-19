@@ -6,6 +6,7 @@ import AnimatedSubtitle from "@/components/AnimatedSubtitle.tsx";
 import Footer from "@/components/Footer.tsx";
 import Projects from "@/components/Projects.tsx";
 import AnimatedImage from "@/components/AnimatedImage.tsx";
+import LandingShapes from "@/components/LandingShapes.tsx";
 
 export default function App() {
   return (
@@ -14,11 +15,13 @@ export default function App() {
         "flex flex-col min-h-screen items-center justify-center bg-background selection:bg-accent-foreground selection:text-background"
       }
     >
-      <div className="h-screen w-full flex sm:flex-row flex-col-reverse p-0 gap-0 relative transition-all">
-        <div className="w-full h-full flex items-center sm:justify-start justify-center sm:p-32">
+      <div className="h-dvh w-full flex sm:flex-row flex-col-reverse p-0 gap-0 relative transition-all">
+        <div className="w-full sm:h-full h-auto flex items-center sm:pb-auto pb-8 sm:justify-start justify-center sm:p-32">
           <div className="clickable flex flex-col gap-12 sm:items-start items-center sm:text-left text-center">
-            <div className="flex flex-col gap-2 sm:items-start items-center sm:text-left text-center">
-              <div className="text-7xl text-foreground font-black">berto™</div>
+            <div className="flex flex-col gap-2 sm:items-start items-center sm:text-left text-center transition-all ease-out">
+              <div className="sm:text-7xl text-5xl text-foreground font-black">
+                berto™
+              </div>
               <AnimatedSubtitle />
             </div>
             <div className="flex flex-row gap-4">
@@ -61,10 +64,13 @@ export default function App() {
           {/*  alt={"berto memoji"}*/}
           {/*  className={"size-64 aspect-square object-cover select-none"}*/}
           {/*/>*/}
-          <AnimatedImage />
+          <div className="relative">
+            <LandingShapes />
+            <AnimatedImage />
+          </div>
         </div>
 
-        <div className="absolute left-0 right-0 bottom-8 items-center justify-center flex">
+        <div className="absolute left-0 right-0 sm:bottom-8 bottom-2 items-center justify-center sm:flex hidden">
           <ArrowDownIcon className={"size-8 text-foreground animate-bounce"} />
         </div>
       </div>
