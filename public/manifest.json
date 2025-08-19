@@ -1,0 +1,15 @@
+{
+  "short_name": "berto",
+  "name": "berto",
+  "icons": [
+    {
+      "src": "/projects/portfolio/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#a8d4d5",
+  "background_color": "#a8d4d5"
+}
