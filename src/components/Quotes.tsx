@@ -24,8 +24,7 @@ export const friendQuotes: Quote[] = [
   },
   {
     content: "come cazzo hai fatto berto è bellissima quest'app",
-    englishTranslation:
-      "berto how the fuck did you do that this app is awesome",
+    englishTranslation: "berto how the fuck did you do it this app is awesome",
     author: "diego",
   },
   { content: "BRAVO BERTO ❤️❤️♾️♾️♾️♾️", author: "carlotta f." },

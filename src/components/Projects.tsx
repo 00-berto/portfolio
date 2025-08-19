@@ -65,7 +65,7 @@ export default function Projects() {
   ];
 
   return (
-    <div className="flex-row gap-3 justify-start w-full pt-12 p-3 grid-cols-3 grid">
+    <div className="gap-3 justify-start w-full pt-12 p-3 md:grid-cols-2 lg:grid-cols-3 grid-cols-1 grid">
       {projects.map((project, index) => (
         <ProjectOverview key={index} project={project} />
       ))}

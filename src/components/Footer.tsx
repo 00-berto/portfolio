@@ -6,7 +6,7 @@ import PortfolioIcon from "@/components/icons/PortfolioIcon.tsx";
 
 export default function Footer() {
   return (
-    <div className="w-full sm:flex hidden flex-col backdrop-blur-xl">
+    <div className="w-full flex flex-col backdrop-blur-xl">
       <div className="bg-accent/50 px-4 py-6 flex flex-row items-center justify-between border-t border-black/20 dark:border-white/20">
         <div className="flex flex-row gap-3 items-center">
           {/*<img*/}
@@ -63,9 +63,9 @@ export default function Footer() {
           <Quotes quotes={friendQuotes} />
         </div>
         <div className="flex flex-col gap-3">
-          <div className="uppercase">
+          <div className="">
             {/*©*/}
-            2025 NAUPLIA. tutti i diritti riservati.
+            2025 berto. all rights reserved.
           </div>
           {/*<div className="flex flex-row gap-5 items-center sm:text-sm text-xs">*/}
           {/*  <button*/}
